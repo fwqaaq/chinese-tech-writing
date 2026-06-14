@@ -1,0 +1,16 @@
+{
+  "name": "chinese-tech-writing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "中文技术文档写作规范 skill 及其检查脚本",
+  "license": "MIT",
+  "bin": {
+    "ctw-lint": "scripts/lint.mjs"
+  },
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "lint:fix": "node scripts/lint.mjs --fix",
+    "test": "node --test"
+  }
+}

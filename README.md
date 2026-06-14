@@ -12,6 +12,31 @@ npx skills add fwqaaq/chinese-tech-writing -g
 
 安装后，在 Claude Code 对话中输入 `/chinese-tech-writing` 即可激活。
 
+## 检查脚本
+
+`scripts/lint.mjs` 用于检测 Markdown 文档中违反本规范的写法，部分机械性问题支持自动修正。
+
+```bash
+# 检测仓库内所有 Markdown 文件
+npm run lint
+
+# 检测并自动修正可修复的问题
+npm run lint:fix
+
+# 检测指定文件
+node scripts/lint.mjs path/to/file.md
+```
+
+可自动修正的问题包括：全角数字、省略号写法、感叹号连用、中英文间缺少空格、全角括号内多余空格。
+标题层级、句子长度、千分位分隔符、文件命名等结构性问题仅报告位置，需人工复核。
+
+## 模板
+
+`templates/` 目录提供两份符合本规范的示例文档，可直接复制作为写作起点：
+
+- [`templates/blog-post.md`](templates/blog-post.md)：技术博客文章模板。
+- [`templates/readme.md`](templates/readme.md)：README / 技术文档模板，结构参考下文「文档体系」一节。
+
 ## 内容
 
 | 章节 | 说明 |
